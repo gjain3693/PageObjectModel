@@ -1,6 +1,9 @@
 package testSuite;
 
+import org.openqa.selenium.WebDriver;
+
 import pageobjects.HomePageObject;
+import pageobjects.Instanceprovider;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -9,12 +12,11 @@ public class HomePage {
 	
 	@Given("^user valid url \"([^\"]*)\" at browser$")
 	public void user_valid_url_at_browser(String url) {
-		
-		HomePageObject.setDriver();
-		
+		System.out.println("URL:::"+url);
+
 		HomePageObject.driver.navigate().to(url);
 		
-		System.out.println("URL:::"+url);
+	
 	  
 	}
 
